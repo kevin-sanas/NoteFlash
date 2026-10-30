@@ -1,0 +1,22 @@
+{
+  "tool": "built-in image_gen",
+  "reference": "approved-atlas.png",
+  "reference_note": "User-supplied transparent 4-pet, 4-pose sheet. Preserved unchanged; used directly for sleeping and neutral seated poses.",
+  "generated_assets": [
+    {
+      "file": "motion-walk-v1.png",
+      "prompt": "Create a production sprite animation atlas based STRICTLY on the provided pet character sheet. Preserve these exact four characters' face shapes, proportions, markings, warm colors, dark chocolate pixel outlines, glossy black eyes and crisp chunky pixel-art shading. Do not simplify or redesign. Transparent RGBA background, no text, no grid lines, no ground or shadows. Layout EXACTLY six equal columns and four equal rows, 1536x1024 canvas, each cell 256x256. Each character remains entirely within its cell with generous 16px minimum margins. SAME character scale and SAME baseline y=232 in EVERY cell. Row 1 only orange-white cat from reference, Row 2 only orange-white floppy eared dog, Row 3 only pale green cute snake, Row 4 only gray-brown raccoon. Every pose faces RIGHT in three-quarter side view exactly like walking column of reference. Six columns are SIX CONSECUTIVE ANIMATION FRAMES of a natural WALK CYCLE (not six identical poses): contact, down, passing, opposite contact, down, passing. Cat/dog/raccoon front and rear legs alternate clearly with paw lift and planted paws, subtle ear and tail follow-through; maintain body/head size unchanged. Snake six frames have a smooth S-shaped traveling body ripple, stable head, occasional tiny tongue flick. No turning, no sitting, no jumping. This is an animation atlas intended for direct 6-column 4-row runtime cropping. Most important: visibly different leg positions across six frames while remaining the EXACT cute detailed pixel characters in the supplied image."
+    },
+    {
+      "file": "motion-expressions-v1.png",
+      "prompt": "Asset: supplementary face/body animation atlas for the EXACT four pixel desktop pets in the reference. Preserve identity and pixel style strictly: same shiny black round eyes, same face mask and fur markings, body proportions and colors; do not simplify. True transparent RGBA background (no backdrop, shadow, grid or text). Canvas 1536x1024, EXACTLY SIX equal columns by FOUR equal rows, cells256x256. Row1 only reference orange-white cat, row2 floppy eared orange-white puppy, row3 pale green snake sitting coiled, row4 gray brown raccoon. All front-facing seated like reference first column, SAME scale and SAME ground baseline within each row. At least20px clear margin per cell; NO overlap. Six columns are distinct natural sequential expressions: (1) relaxed blink, eyelids CLOSED, mouth tiny smile; (2) watching writing below, eyes looking DOWN, head gently tipped down, one front paw tucked closer (snake head leaned down); (3) anticipatory eating, eyes happy, mouth clearly OPEN as if receiving a tiny food (NO food drawn); (4) chewing, mouth CLOSED, rounded puffed cheeks and soft squint eyes, paw on tummy; (5) satisfied burp, eyes closed, mouth tiny round O, one paw raised politely near mouth, chest up (snake tiny round O mouth); (6) delighted starry sparkling eyes like reference fourth column, raised ears and happy grin, small golden pixel sparkles next to head. Each cell must be a different body/face articulation, not a duplicate image with translation. Preserve reference facial identity and pixel shading. This atlas will complement the exact original seated/sleep/walk/sparkle sprites; aim for seamless matching."
+    }
+  ],
+  "runtime_note": "Generated grid spacing was inspected. motion.json stores measured source rectangles and per-species scales. PNG files remain unmodified; Qt draws the selected source regions with nearest-neighbor scaling and a common foot anchor.",
+  "behavior_references": [
+    {"url": "https://github.com/LorisYounger/VPet/blob/main/VPet-Simulator.Core/Graph/GraphInfo.cs", "idea": "Start, Loop, End phases"},
+    {"url": "https://github.com/TigerHix/shimeji-ee/blob/master/conf/actions.xml", "idea": "Independently timed pose frames and movement speed"},
+    {"url": "https://github.com/TigerHix/shimeji-ee/blob/master/conf/behaviors.xml", "idea": "Weighted pauses and behavior transitions"}
+  ],
+  "implementation_note": "Behavior ideas only; no third-party engine, code or character artwork copied. Additional motion frames are candidates pending user visual acceptance."
+}

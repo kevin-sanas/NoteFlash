@@ -1,0 +1,1 @@
+"""Project-local Windows installer."""

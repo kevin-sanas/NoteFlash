@@ -1,0 +1,70 @@
+# Python / build dependencies and caches
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.coverage
+htmlcov/
+/.build-deps/
+/.build-cache/
+/.runtime-deps/
+/.runtime-cache/
+/.runtime-tmp/
+/build/
+/dist/
+
+# Local notes, settings and private working data
+/.note_flash/
+/.qt-data/
+/.desktop-verification-state/
+/.qt-preview-*/
+/.reference-preview-*/
+/.package-verification-*/
+/performance-*/
+.env
+.env.*
+!.env.example
+
+# Tests, diagnostics and review captures stay local
+/tests/
+/artifacts/
+/scripts/verify_*.py
+/scripts/measure_installed.py
+/scripts/preview_*.py
+*.log
+*.tmp
+*.bak
+
+# Local requirements / implementation / handoff documents
+/功能需求与实现方案.md
+/实施计划.md
+/AGENTS.md
+/AI_DEVELOPMENT_WORKFLOW.md
+/**/*需求*.md
+/**/*交接*.md
+/**/*handoff*.md
+
+# Superseded Tk prototype; retained locally for its regression tests
+/note_flash/app.py
+/note_flash/pet.py
+/scripts/build_cat_assets.py
+/assets/pets/cat.json
+/assets/pets/cat.png
+/assets/pets/dog.json
+/assets/pets/dog.png
+/assets/pets/snake.json
+/assets/pets/snake.png
+/assets/pets/raccoon.json
+/assets/pets/raccoon.png
+
+# Editor / OS files
+.idea/
+.vscode/
+Thumbs.db
+Desktop.ini
+.DS_Store
+
+# docs/images is deliberately public: README runtime screenshots.
